@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table" style="margin-top: 25px; margin-left: 15px;" width="40%">
+      <thead>
+        <tr>
+          <th class="h4" style="background-color:grey;">#</th>
+          <th class="h4" style="background-color:grey;">Name</th>
+          <th class="h4" style="background-color:grey;">Channel</th>
+          <th class="h4" style="background-color:grey;">Seasons</th>
+        </tr>
+      </thead >
+      <tbody class="thead-light" style="background-color:aliceblue;">
+        <tr *ngFor = "let c of series">
+          <td class="thead-light" style="background-color:aliceblue;">
+            <dd>{{c.id}}</dd>
+          </td>
+          <td class="thead-light" style="background-color:aliceblue;">
+            <a href="{{c.webpage}}"><dd>{{c.name}}</dd></a>
+          </td>
+          <td class="thead-light" style="background-color:aliceblue;">
+            <dd>{{c.channel}}</dd>
+          </td>
+          <td class="thead-light" style="background-color:aliceblue;">
+            <dd>{{c.seasons}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div><strong>Promedio de temporadas:</strong> {{ calcularPromedioSeasons() }}</div>
+  </div>
+</div>
